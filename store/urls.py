@@ -14,8 +14,8 @@ urlpatterns = [
         "analytics/category-children-count-raw/",
         CategoryChildrenCountRawSQLView.as_view(),
     ),
-    path("api/top-products/", Top5ProductsLastMonthAPIView.as_view()),
+    path("top-products/", Top5ProductsLastMonthAPIView.as_view()),
     path("top5-products/", Top5ProductsMaterializedView.as_view()),
     path("top5-products/refresh/", RefreshTop5ProductsView.as_view()),
-    path("api/add-order-item/", AddOrderItemView.as_view(), name="add-order-item"),
+    path("add-order-item/", AddOrderItemView.as_view(), name="add-order-item"),
 ]
