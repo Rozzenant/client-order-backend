@@ -8,15 +8,3 @@ repos:
     rev: 6.1.0
     hooks:
       - id: flake8
-
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
-    hooks:
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: check-added-large-files
-
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.10.0
-    hooks:
-      - id: reorder-python-imports
