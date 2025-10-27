@@ -14,3 +14,19 @@ def get_clients_with_total_sum():
         """
         )
         return cursor.fetchall()
+
+
+def get_category_children_counts():
+    with connection.cursor() as cursor:
+        cursor.execute(
+            """
+            SELECT parent.id, parent.name, COUNT(child.id) AS children_count
+            FROM store_category parent
+            LEFT JOIN store_category child ON child.parent_id = parent.id
+            GROUP BY parent.id, parent.name
+        """
+        )
+        return [
+            {"id": row[0], "name": row[1], "children_count": row[2]}
+            for row in cursor.fetchall()
+        ]
