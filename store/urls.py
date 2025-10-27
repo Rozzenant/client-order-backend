@@ -1,5 +1,6 @@
 from django.urls import path
 from store.views import (
+    AddOrderItemView,
     CategoryChildrenCountRawSQLView,
     ClientTotalSumRawSQLView,
     RefreshTop5ProductsView,
@@ -16,4 +17,5 @@ urlpatterns = [
     path("api/top-products/", Top5ProductsLastMonthAPIView.as_view()),
     path("top5-products/", Top5ProductsMaterializedView.as_view()),
     path("top5-products/refresh/", RefreshTop5ProductsView.as_view()),
+    path("api/add-order-item/", AddOrderItemView.as_view(), name="add-order-item"),
 ]
