@@ -59,3 +59,21 @@ def get_top_5_products_last_month():
             }
             for row in cursor.fetchall()
         ]
+
+
+def refresh_top5_matview():
+    with connection.cursor() as cursor:
+        cursor.execute("REFRESH MATERIALIZED VIEW top_5_products_last_month_matview")
+
+
+def get_top5_products_from_matview():
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM top_5_products_last_month_matview")
+        return [
+            {
+                "product_name": row[0],
+                "top_level_category": row[1],
+                "total_sold": row[2],
+            }
+            for row in cursor.fetchall()
+        ]
