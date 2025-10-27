@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "ab2bd0a0-d5d8-4cab-9c89-92bb0a99ba4a",
+		"name": "Client-Order API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30675370",
+		"_collection_link": "https://api111-7676.postman.co/workspace/Test~78971e30-a2ef-492c-a47e-8c1eb39ab2b8/collection/30675370-ab2bd0a0-d5d8-4cab-9c89-92bb0a99ba4a?action=share&source=collection_link&creator=30675370"
+	},
+	"item": [
+		{
+			"name": "Analytics",
+			"item": [
+				{
+					"name": "/analytics/client-total-sum-raw/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/analytics/client-total-sum-raw/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"analytics",
+								"client-total-sum-raw",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/analytics/category-children-count-raw/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/analytics/category-children-count-raw/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"analytics",
+								"category-children-count-raw",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "/top-products/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/top-products/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"top-products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/top5-products/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/top5-products/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"top5-products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/top5-products/refresh/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/top5-products/refresh/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"top5-products",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "/add-order-item/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"order_id\": 1,\r\n  \"nomenclature_id\": 2,\r\n  \"quantity\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/add-order-item/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"add-order-item",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
