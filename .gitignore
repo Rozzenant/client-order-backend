@@ -34,7 +34,6 @@ env/
 
 # Env files
 .env
-.env.*
 
 # Migrations
 **/migrations/*.py
