@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from store.services.analytics import (
     get_category_children_counts,
     get_clients_with_total_sum,
+    get_top_5_products_last_month,
 )
 
 
@@ -18,4 +19,10 @@ class ClientTotalSumRawSQLView(APIView):
 class CategoryChildrenCountRawSQLView(APIView):
     def get(self, request):
         data = get_category_children_counts()
+        return Response(data)
+
+
+class Top5ProductsLastMonthAPIView(APIView):
+    def get(self, request):
+        data = get_top_5_products_last_month()
         return Response(data)
